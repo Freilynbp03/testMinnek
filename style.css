@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 20px;
+    grid-gap: 40px;
+    position: absolute;
+}
+
+.card {
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+
+.container {
+    position: relative;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.container:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+
+.card1>.container:after {
+    background-image: linear-gradient( 135deg, #0100ec, #fb36f4);
+}
+
+.card2>.container:after {
+    background-image: linear-gradient( 135deg, #2bdce3, #42ffdb);
+}
+
+.card3>.container:after {
+    background-image: linear-gradient( 135deg, #ffab1d, #f8501c);
+}
+
+.card4>.container:after {
+    background-image: linear-gradient( 135deg, #ffab1d, #f8501c);
+}
+
+.details {
+    padding: 20px 10px;
+}
+
+.details>h3 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+
+.details>p {
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 2px;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.static {
+    background: blue;
+    z-index: -1;
+}
+
+.bg1::after {
+    background-image: url('https://i.pinimg.com/originals/52/2e/ce/522ecec428de81bf8aedef0d5a5e9944.jpg');
+}
+
+.bg2::after {
+    background-image: url('https://i.pinimg.com/originals/52/2e/ce/522ecec428de81bf8aedef0d5a5e9944.jpg');
+}
